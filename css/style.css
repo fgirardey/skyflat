@@ -1,0 +1,460 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600italic,600,700);
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*
+	Start Reset
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1, h2, h3, strong, b {
+	font-weight: bold;
+}
+/*
+	End Reset
+*/
+
+/*
+	Start CSS
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.site-header {
+	color: white;
+	text-transform: uppercase;
+}
+
+.site-header a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+/*		Start Logo
+		==============================================================================	*/
+
+
+div.site-logo {
+	display: block;
+	float: left;
+	height: 60px;
+}
+
+a.navbar-brand {
+	padding: 0;
+	margin: 11px;
+	width: 150px;
+	height: 40px;
+	display: block;
+}
+
+a.navbar-brand > img {
+	width: 150px;
+	height: 40px;
+	display: block;
+	float: left;
+}
+
+/*		End Logo
+		==============================================================================	*/
+
+
+
+/*
+	Start Menu
+*/
+header.site-header > div.header-wrapper > nav {
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.navbar {
+	position: relative;
+	min-height: none;
+	padding-right: inherit;
+	padding-left: inherit;
+	margin-bottom: inherit;
+	background-color: inherit;
+	border-radius: 0;
+}
+
+.navbar-static-top {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.navbar > .navbar-inner {
+	height: 100%;
+	background-color: #007eff;
+	background-image: none;
+}
+
+.navbar .container {
+	padding: 0;
+}
+
+.navbar .btn-navbar {
+	margin-top: 15px;
+	background: #555;
+}
+
+.navbar .btn-navbar:hover {
+	background: #333;
+}
+
+.nav-collapse .dropdown-menu {
+	position: static;
+	top: auto;
+	left: auto;
+	float: none;
+	display: none;
+	max-width: none;
+	margin: 0 15px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.nav > li {
+	height: 100%;
+	position: relative;
+}
+.nav > li > a {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.navbar .nav > li > a {
+	color: white;
+	text-shadow: none;
+	text-decoration: none;
+	padding: 21px 15px;
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+	color: white;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+.navbar .nav > li:hover > a:before {
+	content: '\E75C';
+	font-family: 'entypo';
+	font-size: 18px;
+	position: absolute;
+	margin-top: 20px;
+	left: 45%;
+}
+
+.sub-menu {
+	position: absolute;
+	min-width: 160px;
+	padding: 8px 0;
+	margin: 0;
+	list-style: none;
+	background-color: #fff;
+	border: 0;
+	border-bottom: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+ul.nav > li > ul.sub-menu > li > a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 24px;
+	color: #666666;
+	white-space: nowrap;
+	border: 0;
+	text-transform: uppercase;
+}
+
+ul.nav > li > ul.sub-menu > li > a:hover {
+	color: #007eff;
+}
+
+ul.nav > li:hover .sub-menu {
+	display: block;
+}
+
+.navbar-toggle {
+	border-color: #007eff;
+	background-color: #007eff;
+}
+.navbar-toggle:hover, .navbar-toggle:focus {
+	background-color: rgba(255,255,255,0.1);
+}
+.navbar-toggle > span.icon-bar {
+	background-color: #fff;
+}
+/*
+	End Menu
+*/
+
+
+/*
+	Start Social
+*/
+.navSocial > li > a:before {
+	content:'\F30A';
+	font-family: 'entypo';
+}
+
+ul.menuIcon {
+	list-style: none;
+	margin: 0;
+	border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+ul.menuIcon li {
+	float: left;
+	position: relative;
+}
+
+ul.menuIcon a {
+	font-size: 0;
+	color: transparent;
+	width: 60px;
+	height: 60px;
+	display: block;
+	border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+ul.menuIcon a:hover {
+	background: rgba(255,255,255,0.1);
+}
+
+ul.menuIcon a:before {
+	font-family: 'entypo';
+	font-size: 24px;
+	color: #fff;
+	position: absolute;
+	top: 19px;
+	left: 22px;
+}
+
+ul.menuIcon .twitter a:before {
+	content: '\f309';
+	left: 20px;
+}
+
+ul.menuIcon .facebook a:before {
+	content: '\f30c';
+}
+
+ul.menuIcon .google a:before {
+	content: '\f30f';
+}
+/*
+	End Social
+*/
+
+.btn {
+	display: inline-block;
+	padding: 13px 40px;
+	font-weight: 400;
+	margin-bottom: 5px;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background: #c4c4c4;
+	color: #fff;
+	text-transform: uppercase;
+	filter: none;
+	border: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.entypo-large {
+	font-family: 'entypo';
+	font-size: 68px;
+	-webkit-transition-property: color;
+	-webkit-transition-duration: 2s;
+	-moz-transition-property: color;
+	-moz-transition-duration: 2s;
+	transition-property: color;
+	transition-duration: 1s;
+}
+
+i.entypo-large:hover {
+	color: #007eff;
+}
+
+.project-name {
+	font-size: 24px;
+	line-height: 35px;
+	font-weight: 300;
+	margin: 10px auto;
+}
+.project p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	color: #333;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 979px) {
+	.project {
+		margin-bottom: 25px;
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	/*		Start Logo
+			==============================================================================	*/
+
+	div.site-logo > a {
+		padding: 11px 0;
+	}
+
+	/*		End Logo
+			==============================================================================	*/
+	
+	
+	.nav-collapse .nav > li > a:hover,
+	.nav-collapse .dropdown-menu a:hover,
+	.nav-collapse > .nav > li > .sub-menu > li > a:hover {
+		background-color: #f2f2f2;
+	}
+
+	.nav-collapse .nav > li > a,
+	.nav-collapse .dropdown-menu a,
+	.nav-collapse > .nav > li > .sub-menu > li > a {
+		padding: 9px 15px;
+		color: #fff;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		border: 0;
+		font-weight: 600;
+		text-indent: 30px;
+	}
+
+	.navbar .nav > li > a {
+		color: #fff;
+	}
+
+	.navbar .nav > li > a:focus,
+	.navbar .nav > li > a:hover,
+	.nav-collapse > .nav > li > .sub-menu > li > a:focus,
+	.nav-collapse > .nav > li > .sub-menu > li > a:hover {
+		color: #007eff;
+	}
+
+	.navbar .nav > li:hover > a:before {
+		display: none;
+		content: ' ';
+	}
+
+	.nav-collapse .sub-menu {
+		display: block;
+		position: static;
+		top: auto;
+		left: auto;
+		float: none;
+		max-width: none;
+		margin: 0 15px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		text-indent: 30px;
+	}
+	
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	
+}
