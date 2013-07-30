@@ -3,11 +3,11 @@
  *
  * Admin pannel for SkyFlat
  *
- * @author 			: 		Florian Girardey <florian@girardey.net>
- * @organization 	: 		Groupe Forum
- * @package 		: 		Skyflat
- * @version 		: 		1.0
- * @date 			: 		2013
+ * @author: Florian Girardey <florian@girardey.net>
+ * @organization: Groupe Forum
+ * @package: Skyflat
+ * @version: 1.0
+ * @date: 2013
 */
 
 
@@ -18,6 +18,7 @@ function mySocialProfiles( )
 	register_setting( 'my-pannel', 'facebook_url' );
 	register_setting( 'my-pannel', 'twitter_url' );
 	register_setting( 'my-pannel', 'google_url' );
+	register_setting( 'my-pannel', 'github_url' );
 }
 
 add_action( 'admin_menu', 'myThemeAdminMenu' );
@@ -33,7 +34,14 @@ function myThemeAdminMenu( )
 		null,
 		64
 	);
-	add_submenu_page( 'my-pannel', __('Social Networks','skyflat'), __('Social Networks','skyflat'), 'administrator', 'social-network', 'socialNetworkPannel' );
+	add_submenu_page(
+		'my-pannel',
+		__('Social Networks','skyflat'),
+		__('Social Networks','skyflat'),
+		'administrator',
+		'social-network',
+		'socialNetworkPannel'
+	);
 }
 
 function myThemeSettingsPage()
@@ -65,6 +73,7 @@ function socialNetworkPannel(){
 				ul.menuIcon .twitter a:before{content:'\f309';left:20px}
 				ul.menuIcon .facebook a:before{content:'\f30c'}
 				ul.menuIcon .google a:before{content:'\f30f'}
+				ul.menuIcon .github a:before{content:'\f300'}
 			</style>
 			<div class="apercu">
 				<table class="form-table">
@@ -75,6 +84,7 @@ function socialNetworkPannel(){
 								<li class="twitter"><a href="<?= get_option('twitter_url', '#'); ?>">twitter</a></li>
 								<li class="facebook"><a href="<?= get_option('facebook_url', '#'); ?>">facebook</a></li>
 								<li class="google"><a href="<?= get_option('google_url', '#'); ?>" rel="author">google+</a></li>
+								<li class="github"><a href="<?= get_option('github_url', '#'); ?>" rel="author">github</a></li>
 							</ul>
 						</td>
 					</tr>
@@ -121,6 +131,14 @@ function socialNetworkPannel(){
 								</th>
 								<td>
 									<input type="text" id="google_url" name="google_url" value="<?php echo get_option( 'google_url' ); ?>" size="75" />
+								</td>
+							</tr>
+							<tr valign="top">
+								<th scope="row">
+									<label for="github_url" title="Github">Github</label>
+								</th>
+								<td>
+									<input type="text" id="github_url" name="github_url" value="<?php echo get_option( 'github_url' ); ?>" size="75" />
 								</td>
 							</tr>
 						</tbody>

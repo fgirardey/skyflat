@@ -24,7 +24,7 @@ while($query->have_posts()) : $query->the_post();
 			<?= get_the_term_list( $query->post->ID, 'techno') ?>
     		<h3 class="text-center project-name"><?php the_title(); ?></h3>
     		<div class="text-center project-description">
-    			<?php the_excerpt(); ?>
+    			<?php the_content(); ?>
     		</div>
   		</div>
 	<?php

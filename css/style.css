@@ -1,59 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600italic,600,700);
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-/*
-	Start Reset
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	font-weight: inherit;
+/*		CUSTOM
+		==============================================================================	*/
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-h1, h2, h3, strong, b {
-	font-weight: bold;
-}
-/*
-	End Reset
-*/
 
 /*
 	Start CSS
@@ -76,22 +28,16 @@ body {
 /*		Start Logo
 		==============================================================================	*/
 
-
-div.site-logo {
-	display: block;
-	float: left;
-	height: 60px;
+div.navbar-brand {
+	padding: 10px 15px;
+	margin: 0;
 }
-
-a.navbar-brand {
-	padding: 0;
-	margin: 11px;
+div.navbar-brand > a {
 	width: 150px;
 	height: 40px;
 	display: block;
 }
-
-a.navbar-brand > img {
+div.navbar-brand > a > img {
 	width: 150px;
 	height: 40px;
 	display: block;
@@ -122,15 +68,8 @@ header.site-header > div.header-wrapper > nav {
 	border-radius: 0;
 }
 
-.navbar-static-top {
-	margin-right: 0px;
-	margin-left: 0px;
-}
-
-.navbar > .navbar-inner {
-	height: 100%;
+.navbar {
 	background-color: #007eff;
-	background-image: none;
 }
 
 .navbar .container {
@@ -268,6 +207,7 @@ ul.nav > li:hover .sub-menu {
 ul.menuIcon {
 	list-style: none;
 	margin: 0;
+	padding: 0;
 	border-left: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -294,7 +234,7 @@ ul.menuIcon a:before {
 	font-size: 24px;
 	color: #fff;
 	position: absolute;
-	top: 19px;
+	top: 15px;
 	left: 22px;
 }
 
@@ -310,6 +250,12 @@ ul.menuIcon .facebook a:before {
 ul.menuIcon .google a:before {
 	content: '\f30f';
 }
+
+ul.menuIcon .github a:before {
+	content: '\f300';
+	left: 19px;
+}
+
 /*
 	End Social
 */
@@ -367,16 +313,6 @@ i.entypo-large:hover {
 	color: #333;
 }
 
-/* Large desktop */
-@media (min-width: 1200px) {
-
-}
- 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-
-}
-
 /* Portrait tablet to landscape and desktop */
 @media (max-width: 979px) {
 	.project {
@@ -385,17 +321,7 @@ i.entypo-large:hover {
 }
  
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-	/*		Start Logo
-			==============================================================================	*/
-
-	div.site-logo > a {
-		padding: 11px 0;
-	}
-
-	/*		End Logo
-			==============================================================================	*/
-	
+@media (max-width: 768px) {	
 	
 	.nav-collapse .nav > li > a:hover,
 	.nav-collapse .dropdown-menu a:hover,
@@ -451,10 +377,5 @@ i.entypo-large:hover {
 		box-shadow: none;
 		text-indent: 30px;
 	}
-	
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
 	
 }
